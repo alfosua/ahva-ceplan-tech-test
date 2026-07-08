@@ -1,0 +1,22 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.2.2">
+
+  <PropertyGroup>
+    <AssemblyName>Ahva.Ceplan.AppHost</AssemblyName>
+    <RootNamespace>Ahva.Ceplan.AppHost</RootNamespace>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>c72ca22a-51eb-4671-a949-4f499d99f336</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.SqlServer" Version="13.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Portal\Ceplan.Portal.csproj" />
+    <ProjectReference Include="..\WebApi\Ceplan.WebApi.csproj" />
+  </ItemGroup>
+
+</Project>

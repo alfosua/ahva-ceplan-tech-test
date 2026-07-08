@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CEPLAN</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body class="public-page">
+    <header class="topbar">
+        <a class="topbar-logo" href="/">
+            <span class="topbar-logo-text">CEPLAN</span>
+            <span class="topbar-logo-sub">Centro Nacional de Planeamiento Estratégico</span>
+        </a>
+        <button type="button" class="topbar-help" title="Ayuda" data-wip>?</button>
+    </header>
+
+    <main class="public-main">
+        @RenderBody()
+    </main>
+
+    <footer class="brand-footer">
+        <div class="brand-footer-logos">
+            <div class="brand-shield" title="República del Perú"></div>
+            <div class="brand-block brand-block-red">PERÚ</div>
+            <div class="brand-block brand-block-dark">Presidencia<br />del Consejo de<br />Ministros</div>
+            <div class="brand-block brand-block-gray">Centro Nacional<br />de Planeamiento<br />Estratégico</div>
+        </div>
+    </footer>
+
+    <partial name="_WipModal" />
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

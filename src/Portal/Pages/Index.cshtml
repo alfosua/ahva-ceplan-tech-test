@@ -1,0 +1,28 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Bienvenida";
+}
+
+<div class="center-column">
+    <div class="card-panel welcome-card">
+        <div class="welcome-illustration">
+            <svg viewBox="0 0 120 120" width="110" height="110" aria-hidden="true">
+                <path d="M60 6c26 4 48 22 50 48 2 28-16 56-48 58C33 114 8 96 8 64 8 32 32 2 60 6Z" fill="#fbe4e4" />
+                <g stroke="#c0392b" stroke-width="4" fill="#fff" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M48 74 74 48c8-8 10-20 8-28-8-2-20 0-28 8L28 54c-2 2-2 4 0 6l14 14c2 2 4 2 6 0Z" />
+                    <path d="M38 64l-12 4 8-12" fill="#fbe4e4" />
+                    <path d="M56 82l-4 12 12-8" fill="#fbe4e4" />
+                    <circle cx="64" cy="40" r="6" fill="#fbe4e4" />
+                </g>
+                <circle cx="78" cy="78" r="16" fill="#fff" stroke="#c0392b" stroke-width="4" />
+                <path d="m71 78 5 5 10-10" fill="none" stroke="#c0392b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="88" cy="22" r="3" fill="none" stroke="#c0392b" stroke-width="2" />
+            </svg>
+        </div>
+        <h1 class="welcome-title">¡Bienvenida, July!</h1>
+        <p class="welcome-text">Su cuenta en el aplicativo X está activada.</p>
+        <p class="welcome-text">Ya puede iniciar sesión.</p>
+        <a class="btn btn-ceplan btn-block-lg" asp-page="/Login">Iniciar sesión</a>
+    </div>
+</div>

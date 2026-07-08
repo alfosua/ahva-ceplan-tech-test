@@ -1,0 +1,17 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/AppHost/Ceplan.AppHost.csproj" />
+    <Project Path="src/Contracts/Ceplan.Contracts.csproj" />
+    <Project Path="src/Data/Ceplan.Data.csproj" />
+    <Project Path="src/Domains/Ceplan.Domains.csproj" />
+    <Project Path="src/Portal/Ceplan.Portal.csproj" />
+    <Project Path="src/ServiceDefaults/Ceplan.ServiceDefaults.csproj" />
+    <Project Path="src/WebApi.Client/Ceplan.WebApi.Client.csproj" />
+    <Project Path="src/WebApi/Ceplan.WebApi.csproj" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test/Domains.Tests/Ceplan.Domains.Tests.csproj" />
+    <Project Path="test/Portal.Tests/Ceplan.Portal.Tests.csproj" />
+    <Project Path="test/WebApi.Tests/Ceplan.WebApi.Tests.csproj" />
+  </Folder>
+</Solution>

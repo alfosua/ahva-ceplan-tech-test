@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>Ahva.Ceplan.WebApi.Client</AssemblyName>
+    <RootNamespace>Ahva.Ceplan.WebApi.Client</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Refit.HttpClientFactory" Version="13.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\lib\Shared.ApiResponses\Ceplan.Shared.ApiResponses.csproj" />
+    <ProjectReference Include="..\Contracts\Ceplan.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

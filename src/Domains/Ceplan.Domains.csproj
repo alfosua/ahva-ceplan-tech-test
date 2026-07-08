@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>Ahva.Ceplan.Domains</AssemblyName>
+    <RootNamespace>Ahva.Ceplan.Domains</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contracts\Ceplan.Contracts.csproj" />
+    <ProjectReference Include="..\Data\Ceplan.Data.csproj" />
+  </ItemGroup>
+
+</Project>

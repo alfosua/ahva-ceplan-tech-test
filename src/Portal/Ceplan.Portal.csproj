@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <AssemblyName>Ahva.Ceplan.Portal</AssemblyName>
+    <RootNamespace>Ahva.Ceplan.Portal</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-Ceplan.Portal-bc7fde3e-faa1-4f98-9f4d-1c7761a7e34b</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceDefaults\Ceplan.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\WebApi.Client\Ceplan.WebApi.Client.csproj" />
+  </ItemGroup>
+
+</Project>

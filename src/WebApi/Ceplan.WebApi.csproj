@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <AssemblyName>Ahva.Ceplan.WebApi</AssemblyName>
+    <RootNamespace>Ahva.Ceplan.WebApi</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.6" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\lib\Shared.ApiResponses\Ceplan.Shared.ApiResponses.csproj" />
+    <ProjectReference Include="..\Contracts\Ceplan.Contracts.csproj" />
+    <ProjectReference Include="..\Data\Ceplan.Data.csproj" />
+    <ProjectReference Include="..\Domains\Ceplan.Domains.csproj" />
+    <ProjectReference Include="..\ServiceDefaults\Ceplan.ServiceDefaults.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,123 @@
+@page
+@model PerfilModel
+@{
+    Layout = "_AppLayout";
+    ViewData["Title"] = "Perfíl de usuario";
+    var user = Model.Profile;
+}
+
+<div class="page-head">
+    <nav class="breadcrumb-line">Perfíl de usuario</nav>
+    <h1 class="page-title">Perfíl de usuario</h1>
+</div>
+
+<div class="profile-card">
+    <div class="profile-header">
+        <div class="profile-avatar">
+            <svg viewBox="0 0 24 24" width="52" height="52" fill="#5b7fd4" aria-hidden="true">
+                <circle cx="12" cy="8.5" r="4" />
+                <path d="M4 20c1.6-4 4.5-6 8-6s6.4 2 8 6v1H4Z" />
+            </svg>
+        </div>
+        <div class="profile-headline">
+            <div class="profile-name-line">
+                <h2 class="profile-name">@user.FullName</h2>
+                @if (user.IsActive)
+                {
+                    <span class="badge-active">Activo</span>
+                }
+            </div>
+            <p class="profile-job">@user.JobTitle</p>
+            <p class="profile-entity">@user.Entity</p>
+        </div>
+    </div>
+
+    <ul class="profile-tabs">
+        <li class="profile-tab active">Información básica</li>
+        <li class="profile-tab" data-wip>Responsabilidades</li>
+        <li class="profile-tab" data-wip>Historial de responsabilidades</li>
+    </ul>
+
+    <div class="profile-grid">
+        <div class="profile-field">
+            <label>Nombres</label>
+            <div class="profile-value">@user.FirstNames</div>
+        </div>
+        <div class="profile-field">
+            <label>Primer Apellido</label>
+            <div class="profile-value">@user.LastNamePaternal</div>
+        </div>
+        <div class="profile-field">
+            <label>Segundo Apellido</label>
+            <div class="profile-value">@user.LastNameMaternal</div>
+        </div>
+
+        <div class="profile-field">
+            <label>Tipo de Documento de Identidad</label>
+            <div class="profile-value">@user.DocumentType</div>
+        </div>
+        <div class="profile-field">
+            <label>N° de Documento de Identidad</label>
+            <div class="profile-value">@user.DocumentNumber</div>
+        </div>
+        <div class="profile-field">
+            <label>Fecha de nacimiento</label>
+            <div class="profile-value">@(user.BirthDate?.ToString("dd / MM / yyyy"))</div>
+        </div>
+
+        <div class="profile-field">
+            <label>Nacionalidad</label>
+            <div class="profile-value">@user.Nationality</div>
+        </div>
+        <div class="profile-field">
+            <label>Sexo</label>
+            <div class="profile-value">@user.Sex</div>
+        </div>
+        <div class="profile-field">
+            <label>Correo electrónico principal</label>
+            <div class="profile-value profile-value-editable">
+                @user.Email
+                <span class="edit-icon" title="Editar" data-wip>
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#2f6fd0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m14.5 5.5 4 4L8 20H4v-4Z" />
+                        <path d="m13 7 4 4" />
+                    </svg>
+                </span>
+            </div>
+        </div>
+
+        <div class="profile-field">
+            <label>Correo electrónico secundario <span class="label-optional">(Opcional)</span></label>
+            <div class="profile-value profile-value-empty">@user.SecondaryEmail</div>
+        </div>
+        <div class="profile-field">
+            <label>Teléfono Móvil</label>
+            <div class="profile-value profile-value-editable">
+                @user.MobilePhone
+                <span class="edit-icon" title="Editar" data-wip>
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#2f6fd0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m14.5 5.5 4 4L8 20H4v-4Z" />
+                        <path d="m13 7 4 4" />
+                    </svg>
+                </span>
+            </div>
+        </div>
+        <div class="profile-field">
+            <label>Teléfono secundario <span class="label-optional">(Opcional)</span></label>
+            <div class="profile-phone-pair">
+                <div class="profile-value profile-phone-type" data-wip>@(user.SecondaryPhoneType ?? "Tipo") <span class="chevron">⌄</span></div>
+                <div class="profile-value profile-value-empty profile-phone-number">@user.SecondaryPhone</div>
+            </div>
+        </div>
+
+        <div class="profile-field">
+            <label>Tipo de Contratación</label>
+            <div class="profile-value">@user.ContractType</div>
+        </div>
+        <div class="profile-field">
+            <label>Fecha de contratación</label>
+            <div class="profile-value">@(user.HireDate?.ToString("dd / MM / yyyy"))</div>
+        </div>
+        <div class="profile-field"></div>
+    </div>
+</div>
